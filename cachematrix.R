@@ -20,11 +20,11 @@ list( set = set, get = get,
 }
 
 ## The following function calculates the inverse of the matrix
-## created with the above function. However, it first checks to see 
-## if the inverse matrix has already been calculated. 
-## If so, it gets inverse from the cache and skips the computation. 
-## Otherwise, it calculates the inverse of the matrix 
-## and sets the inverse matrix in the cache via the setinv function.
+## created with the above function. The function skips recalculation 
+## if the inverse of matrix is calculated.
+# Otherwise, it calculates the inverse of the matrix 
+## and sets the inverse matrix in the cache via the setinv function 
+
 
 cacheSolve <- function(x, ...) {
   xinv<- x$getinv()
@@ -37,5 +37,4 @@ cacheSolve <- function(x, ...) {
     x$setinv(xinv)
     xinv
   }
-  
 
