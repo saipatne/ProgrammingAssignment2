@@ -20,8 +20,9 @@ list( set = set, get = get,
 }
 
 ## The following function calculates the inverse of the matrix
-## created with the above function. The function skips recalculation 
-## if the inverse of matrix is calculated and retrieves it from cache.
+## created with the above function "makeCacheMatrix". 
+## The function skips recalculation if 
+## the inverse of matrix is calculated and retrieves it from cache.
 
 
 cacheSolve <- function(x, ...) {
